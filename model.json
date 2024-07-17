@@ -47,7 +47,7 @@
     "blending_mode": "color",
     "blending_blend_percentage": 1.0,
     "vram": 48,
-    "upscale_mp": 3,
+    "upscale_mp": 4,
     "w_tiles": 4,
     "h_tiles": 4
 }
