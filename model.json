@@ -46,8 +46,8 @@
     "blend_mode": "normal",
     "blending_mode": "color",
     "blending_blend_percentage": 1.0,
-    "vram": 24,
-    "upscale_mp": 4,
+    "vram": 48,
+    "upscale_mp": 3,
     "w_tiles": 4,
     "h_tiles": 4
 }
