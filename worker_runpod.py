@@ -123,19 +123,19 @@ def generate(input):
     blend_mode = values['blend_mode']
     blending_mode = values['blending_mode']
     blending_blend_percentage = values['blending_blend_percentage']
+    vram = values['vram']
+    upscale_mp = values['upscale_mp']
+    w_tiles = values['w_tiles']
+    h_tiles = values['h_tiles']
 
     output_image, output_mask = nodes.LoadImage().load_image(input_image)
     output_image_s = ImageScaleToTotalPixels.upscale(image=output_image, upscale_method="nearest-exact", megapixels=1.0)[0]
     image_width = GetImageSizeAndCount.getsize(output_image_s)["result"][1]
     image_height = GetImageSizeAndCount.getsize(output_image_s)["result"][2]
-    upscale_mp = 4
     w_math = ceil((image_width * upscale_mp) / 8) * 8
     h_math = ceil((image_height * upscale_mp) / 8) * 8
-    w_tiles = 4
     tile_width = ceil((w_math / w_tiles) / 8) * 8
-    h_tiles = 4
     tile_height = ceil((h_math / h_tiles) / 8) * 8
-    vram = 8
     tile_batch_size = floor((vram-3) / ((tile_width*tile_height) / 1000000))
     upscale_image = ImageScaleBy.upscale(image=output_image, upscale_method="bilinear", scale_by=1.0)[0]
     upscaled_image = ImageUpscaleWithModel.upscale(upscale_model=upscale_model, image=upscale_image)[0]

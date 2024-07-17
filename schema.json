@@ -552,6 +552,22 @@
       "blending_blend_percentage": {
           "type": "number",
           "description": "blending_blend_percentage"
+      },
+      "vram": {
+          "type": "integer",
+          "description": "vram"
+      },
+      "upscale_mp": {
+          "type": "integer",
+          "description": "upscale_mp"
+      },
+      "w_tiles": {
+          "type": "integer",
+          "description": "w_tiles"
+      },
+      "h_tiles": {
+          "type": "integer",
+          "description": "h_tiles"
       }
   },
   "buttons": [
