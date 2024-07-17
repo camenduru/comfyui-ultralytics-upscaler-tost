@@ -17,6 +17,9 @@ https://github.com/Fannovel16/comfyui_controlnet_aux <br />
 https://github.com/shiimizu/ComfyUI-TiledDiffusion <br />
 https://github.com/WASasquatch/was-node-suite-comfyui <br />
 
+### 🌐 Page
+https://www.reddit.com/r/StableDiffusion/comments/1e3v6jy/tile_controlnet_tiled_diffusion_very_realistic/
+
 ### 🖼 Output
 
 https://github.com/user-attachments/assets/dea63e09-67cc-495c-b5f9-dc4369b1cae6
