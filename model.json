@@ -49,5 +49,6 @@
     "vram": 48,
     "upscale_mp": 4,
     "w_tiles": 4,
-    "h_tiles": 4
+    "h_tiles": 4,
+    "downscale_by": 1.0
 }

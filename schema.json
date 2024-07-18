@@ -568,6 +568,10 @@
       "h_tiles": {
           "type": "integer",
           "description": "h_tiles"
+      },
+      "downscale_by": {
+          "type": "number",
+          "description": "downscale_by"
       }
   },
   "buttons": [

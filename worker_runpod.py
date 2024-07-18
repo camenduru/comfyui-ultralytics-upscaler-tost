@@ -127,6 +127,7 @@ def generate(input):
     upscale_mp = values['upscale_mp']
     w_tiles = values['w_tiles']
     h_tiles = values['h_tiles']
+    downscale_by = values['downscale_by']
 
     output_image, output_mask = nodes.LoadImage().load_image(input_image)
     output_image_s = ImageScaleToTotalPixels.upscale(image=output_image, upscale_method="nearest-exact", megapixels=1.0)[0]
@@ -137,7 +138,7 @@ def generate(input):
     tile_width = ceil((w_math / w_tiles) / 8) * 8
     tile_height = ceil((h_math / h_tiles) / 8) * 8
     tile_batch_size = floor((vram-3) / ((tile_width*tile_height) / 1000000))
-    upscale_image = ImageScaleBy.upscale(image=output_image, upscale_method="bilinear", scale_by=1.0)[0]
+    upscale_image = ImageScaleBy.upscale(image=output_image, upscale_method="bilinear", scale_by=downscale_by)[0]
     upscaled_image = ImageUpscaleWithModel.upscale(upscale_model=upscale_model, image=upscale_image)[0]
     output_image = ImageScale.upscale(image=upscaled_image, upscale_method="bilinear", width=w_math, height=h_math, crop="disabled")[0]
 
