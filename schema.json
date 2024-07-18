@@ -5,6 +5,8 @@
       "readme": {
           "type": "string",
           "title": "Ultralytics Upscaler",
+          "code": "https://github.com/camenduru/comfyui-ultralytics-upscaler-tost",
+          "page": "https://www.reddit.com/r/StableDiffusion/comments/1e3v6jy/tile_controlnet_tiled_diffusion_very_realistic/",
           "tags": [
               "Image to Image"
           ],
