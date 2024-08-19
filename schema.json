@@ -2,584 +2,585 @@
   "$schema": "http://json-schema.org/draft-04/hyper-schema#",
   "type": "object",
   "properties": {
-      "readme": {
-          "type": "string",
-          "title": "Ultralytics Upscaler",
-          "code": "https://github.com/camenduru/comfyui-ultralytics-upscaler-tost",
-          "page": "https://www.reddit.com/r/StableDiffusion/comments/1e3v6jy/tile_controlnet_tiled_diffusion_very_realistic/",
-          "tags": [
-              "Image to Image"
-          ],
-          "widget": "readme"
-      },
-      "input_image_check": {
-          "type": "string",
-          "description": "Input Image URL",
-          "widget": "textarea"
-      },
-      "positive_prompt": {
-          "type": "string",
-          "description": "Positive Prompt",
-          "widget": "textarea"
-      },
-      "negative_prompt": {
-          "type": "string",
-          "description": "Negative Prompt",
-          "widget": "textarea"
-      },
-      "inspire_seed": {
-          "type": "integer",
-          "description": "inspire_seed"
-      },
-      "inspire_steps": {
-          "type": "integer",
-          "description": "inspire_steps"
-      },
-      "inspire_cfg": {
-          "type": "number",
-          "description": "inspire_cfg"
-      },
-      "inspire_sampler_name": {
-        "type": "string",
-        "widget": "select",
-        "description": "inspire_sampler_name",
-        "oneOf": [
-          {
-            "description": "euler",
-            "enum": [
-              "euler"
-            ]
-          },
-          {
-            "description": "euler_ancestral",
-            "enum": [
-              "euler_ancestral"
-            ]
-          },
-          {
-            "description": "heun",
-            "enum": [
-              "heun"
-            ]
-          },
-          {
-            "description": "heunpp2",
-            "enum": [
-              "heunpp2"
-            ]
-          },
-          {
-            "description": "dpm_2",
-            "enum": [
-              "dpm_2"
-            ]
-          },
-          {
-            "description": "dpm_2_ancestral",
-            "enum": [
-              "dpm_2_ancestral"
-            ]
-          },
-          {
-            "description": "lms",
-            "enum": [
-              "lms"
-            ]
-          },
-          {
-            "description": "dpm_fast",
-            "enum": [
-              "dpm_fast"
-            ]
-          },
-          {
-            "description": "dpm_adaptive",
-            "enum": [
-              "dpm_adaptive"
-            ]
-          },
-          {
-            "description": "dpmpp_2s_ancestral",
-            "enum": [
-              "dpmpp_2s_ancestral"
-            ]
-          },
-          {
-            "description": "dpmpp_sde",
-            "enum": [
-              "dpmpp_sde"
-            ]
-          },
-          {
-            "description": "dpmpp_sde_gpu",
-            "enum": [
-              "dpmpp_sde_gpu"
-            ]
-          },
-          {
-            "description": "dpmpp_2m",
-            "enum": [
-              "dpmpp_2m"
-            ]
-          },
-          {
-            "description": "dpmpp_2m_sde",
-            "enum": [
-              "dpmpp_2m_sde"
-            ]
-          },
-          {
-            "description": "dpmpp_2m_sde_gpu",
-            "enum": [
-              "dpmpp_2m_sde_gpu"
-            ]
-          },
-          {
-            "description": "dpmpp_3m_sde",
-            "enum": [
-              "dpmpp_3m_sde"
-            ]
-          },
-          {
-            "description": "dpmpp_3m_sde_gpu",
-            "enum": [
-              "dpmpp_3m_sde_gpu"
-            ]
-          },
-          {
-            "description": "ddpm",
-            "enum": [
-              "ddpm"
-            ]
-          },
-          {
-            "description": "lcm",
-            "enum": [
-              "lcm"
-            ]
-          },
-          {
-            "description": "ddim",
-            "enum": [
-              "ddim"
-            ]
-          },
-          {
-            "description": "uni_pc",
-            "enum": [
-              "uni_pc"
-            ]
-          },
-          {
-            "description": "uni_pc_bh2",
-            "enum": [
-              "uni_pc_bh2"
-            ]
-          }
-        ],
-        "default": "dpmpp_2m"
-      },
-      "inspire_scheduler": {
-        "type": "string",
-        "widget": "select",
-        "description": "inspire_scheduler",
-        "oneOf": [
-          {
-            "description": "karras",
-            "enum": [
-              "karras"
-            ]
-          },
-          {
-            "description": "exponential",
-            "enum": [
-              "exponential"
-            ]
-          },
-          {
-            "description": "heunpp2",
-            "enum": [
-              "heunpp2"
-            ]
-          },
-          {
-            "description": "sgm_uniform",
-            "enum": [
-              "sgm_uniform"
-            ]
-          },
-          {
-            "description": "simple",
-            "enum": [
-              "simple"
-            ]
-          },
-          {
-            "description": "ddim_uniform",
-            "enum": [
-              "ddim_uniform"
-            ]
-          }
-        ],
-        "default": "karras"
-      },
-      "inspire_denoise": {
-          "type": "number",
-          "description": "inspire_denoise"
-      },
-      "inspire_noise_mode": {
-          "type": "string",
-          "description": "inspire_noise_mode"
-      },
-      "inspire_batch_seed_mode": {
-          "type": "string",
-          "description": "inspire_batch_seed_mode"
-      },
-      "inspire_variation_seed": {
-          "type": "number",
-          "description": "inspire_variation_seed"
-      },
-      "inspire_variation_strength": {
-          "type": "integer",
-          "description": "inspire_variation_strength"
-      },
-      "inspire_variation_method": {
-          "type": "string",
-          "description": "inspire_variation_method"
-      },
-      "scale_factor": {
-          "type": "number",
-          "description": "scale_factor"
-      },
-      "blur_strength": {
-          "type": "number",
-          "description": "blur_strength"
-      },
-      "strength": {
-          "type": "number",
-          "description": "strength"
-      },
-      "start_percent": {
-          "type": "number",
-          "description": "start_percent"
-      },
-      "end_percent": {
-          "type": "number",
-          "description": "end_percent"
-      },
-      "tile_method": {
-          "type": "string",
-          "description": "tile_method"
-      },
-      "tile_overlap": {
-          "type": "integer",
-          "description": "tile_overlap"
-      },
-      "tile_size": {
-          "type": "integer",
-          "description": "tile_size"
-      },
-      "threshold": {
-          "type": "number",
-          "description": "threshold"
-      },
-      "dilation": {
-          "type": "integer",
-          "description": "dilation"
-      },
-      "crop_factor": {
-          "type": "number",
-          "description": "crop_factor"
-      },
-      "drop_size": {
-          "type": "integer",
-          "description": "drop_size"
-      },
-      "labels": {
-          "type": "string",
-          "description": "labels"
-      },
-      "detailer_guide_size": {
-          "type": "integer",
-          "description": "detailer_guide_size"
-      },
-      "detailer_guide_size_for_bbox": {
-          "type": "boolean",
-          "description": "detailer_guide_size_for_bbox"
-      },
-      "detailer_max_size": {
-          "type": "integer",
-          "description": "detailer_max_size"
-      },
-      "detailer_seed": {
-          "type": "integer",
-          "description": "detailer_seed"
-      },
-      "detailer_steps": {
-          "type": "integer",
-          "description": "detailer_steps"
-      },
-      "detailer_cfg": {
-          "type": "number",
-          "description": "detailer_cfg"
-      },
-      "detailer_sampler_name": {
-        "type": "string",
-        "widget": "select",
-        "description": "detailer_sampler_name",
-        "oneOf": [
-          {
-            "description": "euler",
-            "enum": [
-              "euler"
-            ]
-          },
-          {
-            "description": "euler_ancestral",
-            "enum": [
-              "euler_ancestral"
-            ]
-          },
-          {
-            "description": "heun",
-            "enum": [
-              "heun"
-            ]
-          },
-          {
-            "description": "heunpp2",
-            "enum": [
-              "heunpp2"
-            ]
-          },
-          {
-            "description": "dpm_2",
-            "enum": [
-              "dpm_2"
-            ]
-          },
-          {
-            "description": "dpm_2_ancestral",
-            "enum": [
-              "dpm_2_ancestral"
-            ]
-          },
-          {
-            "description": "lms",
-            "enum": [
-              "lms"
-            ]
-          },
-          {
-            "description": "dpm_fast",
-            "enum": [
-              "dpm_fast"
-            ]
-          },
-          {
-            "description": "dpm_adaptive",
-            "enum": [
-              "dpm_adaptive"
-            ]
-          },
-          {
-            "description": "dpmpp_2s_ancestral",
-            "enum": [
-              "dpmpp_2s_ancestral"
-            ]
-          },
-          {
-            "description": "dpmpp_sde",
-            "enum": [
-              "dpmpp_sde"
-            ]
-          },
-          {
-            "description": "dpmpp_sde_gpu",
-            "enum": [
-              "dpmpp_sde_gpu"
-            ]
-          },
-          {
-            "description": "dpmpp_2m",
-            "enum": [
-              "dpmpp_2m"
-            ]
-          },
-          {
-            "description": "dpmpp_2m_sde",
-            "enum": [
-              "dpmpp_2m_sde"
-            ]
-          },
-          {
-            "description": "dpmpp_2m_sde_gpu",
-            "enum": [
-              "dpmpp_2m_sde_gpu"
-            ]
-          },
-          {
-            "description": "dpmpp_3m_sde",
-            "enum": [
-              "dpmpp_3m_sde"
-            ]
-          },
-          {
-            "description": "dpmpp_3m_sde_gpu",
-            "enum": [
-              "dpmpp_3m_sde_gpu"
-            ]
-          },
-          {
-            "description": "ddpm",
-            "enum": [
-              "ddpm"
-            ]
-          },
-          {
-            "description": "lcm",
-            "enum": [
-              "lcm"
-            ]
-          },
-          {
-            "description": "ddim",
-            "enum": [
-              "ddim"
-            ]
-          },
-          {
-            "description": "uni_pc",
-            "enum": [
-              "uni_pc"
-            ]
-          },
-          {
-            "description": "uni_pc_bh2",
-            "enum": [
-              "uni_pc_bh2"
-            ]
-          }
-        ],
-        "default": "dpmpp_2m"
-      },
-      "detailer_scheduler": {
-        "type": "string",
-        "widget": "select",
-        "description": "detailer_scheduler",
-        "oneOf": [
-          {
-            "description": "karras",
-            "enum": [
-              "karras"
-            ]
-          },
-          {
-            "description": "exponential",
-            "enum": [
-              "exponential"
-            ]
-          },
-          {
-            "description": "heunpp2",
-            "enum": [
-              "heunpp2"
-            ]
-          },
-          {
-            "description": "sgm_uniform",
-            "enum": [
-              "sgm_uniform"
-            ]
-          },
-          {
-            "description": "simple",
-            "enum": [
-              "simple"
-            ]
-          },
-          {
-            "description": "ddim_uniform",
-            "enum": [
-              "ddim_uniform"
-            ]
-          }
-        ],
-        "default": "karras"
-      },
-      "detailer_denoise": {
-          "type": "number",
-          "description": "detailer_denoise"
-      },
-      "detailer_feather": {
-          "type": "integer",
-          "description": "detailer_feather"
-      },
-      "detailer_noise_mask": {
-          "type": "boolean",
-          "description": "detailer_noise_mask"
-      },
-      "detailer_force_inpaint": {
-          "type": "boolean",
-          "description": "detailer_force_inpaint"
-      },
-      "detailer_cycle": {
-          "type": "integer",
-          "description": "detailer_cycle"
-      },
-      "detailer_inpaint_model": {
-          "type": "boolean",
-          "description": "detailer_inpaint_model"
-      },
-      "detailer_noise_mask_feather": {
-          "type": "integer",
-          "description": "detailer_noise_mask_feather"
-      },
-      "color_method": {
-          "type": "string",
-          "description": "color_method"
-      },
-      "blend_factor": {
-          "type": "number",
-          "description": "blend_factor"
-      },
-      "blend_mode": {
-          "type": "string",
-          "description": "blend_mode"
-      },
-      "blending_mode": {
-          "type": "string",
-          "description": "blending_mode"
-      },
-      "blending_blend_percentage": {
-          "type": "number",
-          "description": "blending_blend_percentage"
-      },
-      "vram": {
-          "type": "integer",
-          "description": "vram"
-      },
-      "upscale_mp": {
-          "type": "integer",
-          "description": "upscale_mp"
-      },
-      "w_tiles": {
-          "type": "integer",
-          "description": "w_tiles"
-      },
-      "h_tiles": {
-          "type": "integer",
-          "description": "h_tiles"
-      },
-      "downscale_by": {
-          "type": "number",
-          "description": "downscale_by"
-      }
+    "readme": {
+      "type": "string",
+      "title": "Ultralytics Upscaler",
+      "code": "https://github.com/camenduru/comfyui-ultralytics-upscaler-tost",
+      "page": "https://www.reddit.com/r/StableDiffusion/comments/1e3v6jy/tile_controlnet_tiled_diffusion_very_realistic/",
+      "api": "https://github.com/camenduru/tost-api-examples/blob/main/v1/comfyui-ultralytics-upscaler.ipynb",
+      "tags": [
+        "Image to Image"
+      ],
+      "widget": "readme"
+    },
+    "input_image_check": {
+      "type": "string",
+      "description": "Input Image URL",
+      "widget": "textarea"
+    },
+    "positive_prompt": {
+      "type": "string",
+      "description": "Positive Prompt",
+      "widget": "textarea"
+    },
+    "negative_prompt": {
+      "type": "string",
+      "description": "Negative Prompt",
+      "widget": "textarea"
+    },
+    "inspire_seed": {
+      "type": "integer",
+      "description": "inspire_seed"
+    },
+    "inspire_steps": {
+      "type": "integer",
+      "description": "inspire_steps"
+    },
+    "inspire_cfg": {
+      "type": "number",
+      "description": "inspire_cfg"
+    },
+    "inspire_sampler_name": {
+      "type": "string",
+      "widget": "select",
+      "description": "inspire_sampler_name",
+      "oneOf": [
+        {
+          "description": "euler",
+          "enum": [
+            "euler"
+          ]
+        },
+        {
+          "description": "euler_ancestral",
+          "enum": [
+            "euler_ancestral"
+          ]
+        },
+        {
+          "description": "heun",
+          "enum": [
+            "heun"
+          ]
+        },
+        {
+          "description": "heunpp2",
+          "enum": [
+            "heunpp2"
+          ]
+        },
+        {
+          "description": "dpm_2",
+          "enum": [
+            "dpm_2"
+          ]
+        },
+        {
+          "description": "dpm_2_ancestral",
+          "enum": [
+            "dpm_2_ancestral"
+          ]
+        },
+        {
+          "description": "lms",
+          "enum": [
+            "lms"
+          ]
+        },
+        {
+          "description": "dpm_fast",
+          "enum": [
+            "dpm_fast"
+          ]
+        },
+        {
+          "description": "dpm_adaptive",
+          "enum": [
+            "dpm_adaptive"
+          ]
+        },
+        {
+          "description": "dpmpp_2s_ancestral",
+          "enum": [
+            "dpmpp_2s_ancestral"
+          ]
+        },
+        {
+          "description": "dpmpp_sde",
+          "enum": [
+            "dpmpp_sde"
+          ]
+        },
+        {
+          "description": "dpmpp_sde_gpu",
+          "enum": [
+            "dpmpp_sde_gpu"
+          ]
+        },
+        {
+          "description": "dpmpp_2m",
+          "enum": [
+            "dpmpp_2m"
+          ]
+        },
+        {
+          "description": "dpmpp_2m_sde",
+          "enum": [
+            "dpmpp_2m_sde"
+          ]
+        },
+        {
+          "description": "dpmpp_2m_sde_gpu",
+          "enum": [
+            "dpmpp_2m_sde_gpu"
+          ]
+        },
+        {
+          "description": "dpmpp_3m_sde",
+          "enum": [
+            "dpmpp_3m_sde"
+          ]
+        },
+        {
+          "description": "dpmpp_3m_sde_gpu",
+          "enum": [
+            "dpmpp_3m_sde_gpu"
+          ]
+        },
+        {
+          "description": "ddpm",
+          "enum": [
+            "ddpm"
+          ]
+        },
+        {
+          "description": "lcm",
+          "enum": [
+            "lcm"
+          ]
+        },
+        {
+          "description": "ddim",
+          "enum": [
+            "ddim"
+          ]
+        },
+        {
+          "description": "uni_pc",
+          "enum": [
+            "uni_pc"
+          ]
+        },
+        {
+          "description": "uni_pc_bh2",
+          "enum": [
+            "uni_pc_bh2"
+          ]
+        }
+      ],
+      "default": "dpmpp_2m"
+    },
+    "inspire_scheduler": {
+      "type": "string",
+      "widget": "select",
+      "description": "inspire_scheduler",
+      "oneOf": [
+        {
+          "description": "karras",
+          "enum": [
+            "karras"
+          ]
+        },
+        {
+          "description": "exponential",
+          "enum": [
+            "exponential"
+          ]
+        },
+        {
+          "description": "heunpp2",
+          "enum": [
+            "heunpp2"
+          ]
+        },
+        {
+          "description": "sgm_uniform",
+          "enum": [
+            "sgm_uniform"
+          ]
+        },
+        {
+          "description": "simple",
+          "enum": [
+            "simple"
+          ]
+        },
+        {
+          "description": "ddim_uniform",
+          "enum": [
+            "ddim_uniform"
+          ]
+        }
+      ],
+      "default": "karras"
+    },
+    "inspire_denoise": {
+      "type": "number",
+      "description": "inspire_denoise"
+    },
+    "inspire_noise_mode": {
+      "type": "string",
+      "description": "inspire_noise_mode"
+    },
+    "inspire_batch_seed_mode": {
+      "type": "string",
+      "description": "inspire_batch_seed_mode"
+    },
+    "inspire_variation_seed": {
+      "type": "number",
+      "description": "inspire_variation_seed"
+    },
+    "inspire_variation_strength": {
+      "type": "integer",
+      "description": "inspire_variation_strength"
+    },
+    "inspire_variation_method": {
+      "type": "string",
+      "description": "inspire_variation_method"
+    },
+    "scale_factor": {
+      "type": "number",
+      "description": "scale_factor"
+    },
+    "blur_strength": {
+      "type": "number",
+      "description": "blur_strength"
+    },
+    "strength": {
+      "type": "number",
+      "description": "strength"
+    },
+    "start_percent": {
+      "type": "number",
+      "description": "start_percent"
+    },
+    "end_percent": {
+      "type": "number",
+      "description": "end_percent"
+    },
+    "tile_method": {
+      "type": "string",
+      "description": "tile_method"
+    },
+    "tile_overlap": {
+      "type": "integer",
+      "description": "tile_overlap"
+    },
+    "tile_size": {
+      "type": "integer",
+      "description": "tile_size"
+    },
+    "threshold": {
+      "type": "number",
+      "description": "threshold"
+    },
+    "dilation": {
+      "type": "integer",
+      "description": "dilation"
+    },
+    "crop_factor": {
+      "type": "number",
+      "description": "crop_factor"
+    },
+    "drop_size": {
+      "type": "integer",
+      "description": "drop_size"
+    },
+    "labels": {
+      "type": "string",
+      "description": "labels"
+    },
+    "detailer_guide_size": {
+      "type": "integer",
+      "description": "detailer_guide_size"
+    },
+    "detailer_guide_size_for_bbox": {
+      "type": "boolean",
+      "description": "detailer_guide_size_for_bbox"
+    },
+    "detailer_max_size": {
+      "type": "integer",
+      "description": "detailer_max_size"
+    },
+    "detailer_seed": {
+      "type": "integer",
+      "description": "detailer_seed"
+    },
+    "detailer_steps": {
+      "type": "integer",
+      "description": "detailer_steps"
+    },
+    "detailer_cfg": {
+      "type": "number",
+      "description": "detailer_cfg"
+    },
+    "detailer_sampler_name": {
+      "type": "string",
+      "widget": "select",
+      "description": "detailer_sampler_name",
+      "oneOf": [
+        {
+          "description": "euler",
+          "enum": [
+            "euler"
+          ]
+        },
+        {
+          "description": "euler_ancestral",
+          "enum": [
+            "euler_ancestral"
+          ]
+        },
+        {
+          "description": "heun",
+          "enum": [
+            "heun"
+          ]
+        },
+        {
+          "description": "heunpp2",
+          "enum": [
+            "heunpp2"
+          ]
+        },
+        {
+          "description": "dpm_2",
+          "enum": [
+            "dpm_2"
+          ]
+        },
+        {
+          "description": "dpm_2_ancestral",
+          "enum": [
+            "dpm_2_ancestral"
+          ]
+        },
+        {
+          "description": "lms",
+          "enum": [
+            "lms"
+          ]
+        },
+        {
+          "description": "dpm_fast",
+          "enum": [
+            "dpm_fast"
+          ]
+        },
+        {
+          "description": "dpm_adaptive",
+          "enum": [
+            "dpm_adaptive"
+          ]
+        },
+        {
+          "description": "dpmpp_2s_ancestral",
+          "enum": [
+            "dpmpp_2s_ancestral"
+          ]
+        },
+        {
+          "description": "dpmpp_sde",
+          "enum": [
+            "dpmpp_sde"
+          ]
+        },
+        {
+          "description": "dpmpp_sde_gpu",
+          "enum": [
+            "dpmpp_sde_gpu"
+          ]
+        },
+        {
+          "description": "dpmpp_2m",
+          "enum": [
+            "dpmpp_2m"
+          ]
+        },
+        {
+          "description": "dpmpp_2m_sde",
+          "enum": [
+            "dpmpp_2m_sde"
+          ]
+        },
+        {
+          "description": "dpmpp_2m_sde_gpu",
+          "enum": [
+            "dpmpp_2m_sde_gpu"
+          ]
+        },
+        {
+          "description": "dpmpp_3m_sde",
+          "enum": [
+            "dpmpp_3m_sde"
+          ]
+        },
+        {
+          "description": "dpmpp_3m_sde_gpu",
+          "enum": [
+            "dpmpp_3m_sde_gpu"
+          ]
+        },
+        {
+          "description": "ddpm",
+          "enum": [
+            "ddpm"
+          ]
+        },
+        {
+          "description": "lcm",
+          "enum": [
+            "lcm"
+          ]
+        },
+        {
+          "description": "ddim",
+          "enum": [
+            "ddim"
+          ]
+        },
+        {
+          "description": "uni_pc",
+          "enum": [
+            "uni_pc"
+          ]
+        },
+        {
+          "description": "uni_pc_bh2",
+          "enum": [
+            "uni_pc_bh2"
+          ]
+        }
+      ],
+      "default": "dpmpp_2m"
+    },
+    "detailer_scheduler": {
+      "type": "string",
+      "widget": "select",
+      "description": "detailer_scheduler",
+      "oneOf": [
+        {
+          "description": "karras",
+          "enum": [
+            "karras"
+          ]
+        },
+        {
+          "description": "exponential",
+          "enum": [
+            "exponential"
+          ]
+        },
+        {
+          "description": "heunpp2",
+          "enum": [
+            "heunpp2"
+          ]
+        },
+        {
+          "description": "sgm_uniform",
+          "enum": [
+            "sgm_uniform"
+          ]
+        },
+        {
+          "description": "simple",
+          "enum": [
+            "simple"
+          ]
+        },
+        {
+          "description": "ddim_uniform",
+          "enum": [
+            "ddim_uniform"
+          ]
+        }
+      ],
+      "default": "karras"
+    },
+    "detailer_denoise": {
+      "type": "number",
+      "description": "detailer_denoise"
+    },
+    "detailer_feather": {
+      "type": "integer",
+      "description": "detailer_feather"
+    },
+    "detailer_noise_mask": {
+      "type": "boolean",
+      "description": "detailer_noise_mask"
+    },
+    "detailer_force_inpaint": {
+      "type": "boolean",
+      "description": "detailer_force_inpaint"
+    },
+    "detailer_cycle": {
+      "type": "integer",
+      "description": "detailer_cycle"
+    },
+    "detailer_inpaint_model": {
+      "type": "boolean",
+      "description": "detailer_inpaint_model"
+    },
+    "detailer_noise_mask_feather": {
+      "type": "integer",
+      "description": "detailer_noise_mask_feather"
+    },
+    "color_method": {
+      "type": "string",
+      "description": "color_method"
+    },
+    "blend_factor": {
+      "type": "number",
+      "description": "blend_factor"
+    },
+    "blend_mode": {
+      "type": "string",
+      "description": "blend_mode"
+    },
+    "blending_mode": {
+      "type": "string",
+      "description": "blending_mode"
+    },
+    "blending_blend_percentage": {
+      "type": "number",
+      "description": "blending_blend_percentage"
+    },
+    "vram": {
+      "type": "integer",
+      "description": "vram"
+    },
+    "upscale_mp": {
+      "type": "integer",
+      "description": "upscale_mp"
+    },
+    "w_tiles": {
+      "type": "integer",
+      "description": "w_tiles"
+    },
+    "h_tiles": {
+      "type": "integer",
+      "description": "h_tiles"
+    },
+    "downscale_by": {
+      "type": "number",
+      "description": "downscale_by"
+    }
   },
   "buttons": [
-      {
-          "id": "enter",
-          "label": "🥪 Enter"
-      }
+    {
+      "id": "enter",
+      "label": "🥪 Enter"
+    }
   ]
 }
