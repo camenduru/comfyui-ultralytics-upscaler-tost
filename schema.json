@@ -575,6 +575,14 @@
     "downscale_by": {
       "type": "number",
       "description": "downscale_by"
+    },
+    "example": {
+      "type": "string",
+      "image1": "https://fakeimg.pl/1024x1024/282828/eae0d0/?text=input#.png",
+      "image2": "https://files.catbox.moe/frdc2j.jpg",
+      "image3": "https://fakeimg.pl/1024x1024/282828/eae0d0/?text=output#.png",
+      "image4": "https://files.catbox.moe/n7qml5.png",
+      "widget": "example"
     }
   },
   "buttons": [
