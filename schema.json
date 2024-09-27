@@ -13,6 +13,12 @@
       ],
       "widget": "readme"
     },
+    "upload": {
+      "type": "string",
+      "widget": "upload",
+      "upload_url": "https://litterbox.catbox.moe/resources/internals/api.php",
+      "property": "input_image_check"
+    },
     "input_image_check": {
       "type": "string",
       "description": "Input Image URL",
