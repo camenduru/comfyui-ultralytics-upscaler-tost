@@ -29,4 +29,4 @@ https://huggingface.co/xinsir/controlnet-tile-sdxl-1.0 <br />
 https://github.com/user-attachments/assets/dea63e09-67cc-495c-b5f9-dc4369b1cae6
 
 ### 🏢 Sponsor
-https://runpod.io
+[https://runpod.io](https://runpod.io?ref=iqi9iy8y)
